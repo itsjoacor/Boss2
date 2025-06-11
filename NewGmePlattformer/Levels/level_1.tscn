@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://dypev0qrj3e6s" path="res://Gem/gem.tscn" id="5_lq6yu"]
 [ext_resource type="AudioStream" uid="uid://1vgh2yhyxy3a" path="res://assets/actiontheme-v3.ogg" id="7_4horr"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xoyoh"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0urlm"]
 texture = ExtResource("3_77x7w")
 0:8/0 = 0
 0:8/0/terrain_set = 0
@@ -103,7 +103,7 @@ physics_layer_0/collision_mask = 0
 terrain_set_0/mode = 0
 terrain_set_0/terrain_0/name = "T 0"
 terrain_set_0/terrain_0/color = Color(0.5, 0.34375, 0.25, 1)
-sources/0 = SubResource("TileSetAtlasSource_xoyoh")
+sources/0 = SubResource("TileSetAtlasSource_0urlm")
 
 [node name="Level1" type="Node2D"]
 script = ExtResource("1_g3s30")
