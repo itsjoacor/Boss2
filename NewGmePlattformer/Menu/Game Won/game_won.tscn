@@ -1,16 +1,25 @@
-[gd_scene load_steps=2 format=3 uid="uid://mk4oxdd7r3wk"]
+[gd_scene load_steps=4 format=3 uid="uid://mk4oxdd7r3wk"]
 
 [ext_resource type="Script" uid="uid://ctt1f4pr6mnxu" path="res://Menu/Game Won/game_won.gd" id="1_phsy6"]
+[ext_resource type="Texture2D" uid="uid://dc4s8qipykbdi" path="res://assets/1111.jpg" id="2_s1vo1"]
+[ext_resource type="FontFile" uid="uid://c50a1jx4w8g1" path="res://assets/Fonts/Xolonium-Regular.ttf" id="3_uvcp7"]
 
 [node name="GameWon" type="CanvasLayer"]
 script = ExtResource("1_phsy6")
 
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(576, 326.5)
+scale = Vector2(1.88235, 1.99693)
+texture = ExtResource("2_s1vo1")
+
 [node name="TitleLabel" type="Label" parent="."]
-offset_left = 7.0
-offset_top = 45.0
-offset_right = 1155.0
-offset_bottom = 71.0
+offset_left = 5.0
+offset_top = 117.0
+offset_right = 1153.0
+offset_bottom = 166.0
 theme_type_variation = &"HeaderLarge"
+theme_override_fonts/font = ExtResource("3_uvcp7")
+theme_override_font_sizes/font_size = 40
 text = "Ganaste!"
 horizontal_alignment = 1
 
@@ -22,13 +31,15 @@ offset_bottom = 465.0
 
 [node name="Restart" type="Button" parent="Options"]
 layout_mode = 2
-text = "Start"
+theme_override_fonts/font = ExtResource("3_uvcp7")
+text = "Restart"
 
 [node name="Quit" type="Button" parent="Options"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_uvcp7")
 text = "Exit"
 
-[connection signal="pressed" from="Options/Restart" to="." method="_on_restart_pressed"]
 [connection signal="pressed" from="Options/Restart" to="." method="_on_start_button_pressed"]
-[connection signal="pressed" from="Options/Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="Options/Restart" to="." method="_on_restart_pressed"]
 [connection signal="pressed" from="Options/Quit" to="." method="_on_fullscreen_button_pressed"]
+[connection signal="pressed" from="Options/Quit" to="." method="_on_quit_pressed"]

@@ -543,7 +543,6 @@ sources/0 = SubResource("TileSetAtlasSource_6issp")
 
 [node name="Level2" type="Node2D"]
 script = ExtResource("1_artm1")
-level_num = 2
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_wfi5k")

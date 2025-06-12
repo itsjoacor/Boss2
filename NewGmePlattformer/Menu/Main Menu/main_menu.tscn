@@ -1,35 +1,47 @@
-[gd_scene load_steps=2 format=3 uid="uid://dh2na2l3qky5b"]
+[gd_scene load_steps=4 format=3 uid="uid://dh2na2l3qky5b"]
 
 [ext_resource type="Script" uid="uid://lsojvp4lo2es" path="res://Menu/Main Menu/main_menu.gd" id="1_r02ye"]
+[ext_resource type="FontFile" uid="uid://c50a1jx4w8g1" path="res://assets/Fonts/Xolonium-Regular.ttf" id="2_tvur4"]
+[ext_resource type="Texture2D" uid="uid://dc4s8qipykbdi" path="res://assets/1111.jpg" id="2_vf21d"]
 
 [node name="MainMenu" type="CanvasLayer"]
 script = ExtResource("1_r02ye")
 
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(577, 325.5)
+scale = Vector2(1.87908, 1.97853)
+texture = ExtResource("2_vf21d")
+
 [node name="TitleLabel" type="Label" parent="."]
-offset_left = 7.0
-offset_top = 45.0
-offset_right = 1155.0
-offset_bottom = 71.0
+offset_left = 4.0
+offset_top = 149.0
+offset_right = 1152.0
+offset_bottom = 204.0
 theme_type_variation = &"HeaderLarge"
-text = "No-name game"
+theme_override_fonts/font = ExtResource("2_tvur4")
+theme_override_font_sizes/font_size = 40
+text = "Bienvenidos!"
 horizontal_alignment = 1
 
 [node name="Options" type="VBoxContainer" parent="."]
-offset_left = 512.0
-offset_top = 226.0
-offset_right = 654.0
-offset_bottom = 330.0
+offset_left = 478.0
+offset_top = 290.0
+offset_right = 682.0
+offset_bottom = 429.0
 
 [node name="Comenzar" type="Button" parent="Options"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_tvur4")
 text = "Comenzar"
 
 [node name="Reglas" type="Button" parent="Options"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_tvur4")
 text = "Reglas"
 
 [node name="Exit" type="Button" parent="Options"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_tvur4")
 text = "Exit"
 
 [connection signal="pressed" from="Options/Comenzar" to="." method="_on_start_button_pressed"]
