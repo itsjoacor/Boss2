@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="2DPlatformer"
-run/main_scene="uid://b8s2j0r7a5wl3"
+run/main_scene="uid://dh2na2l3qky5b"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.png"
 

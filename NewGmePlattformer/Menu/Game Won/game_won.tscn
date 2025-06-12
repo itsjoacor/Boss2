@@ -1,11 +1,9 @@
 [gd_scene load_steps=2 format=3 uid="uid://mk4oxdd7r3wk"]
 
-[ext_resource type="Script" uid="uid://lsojvp4lo2es" path="res://Menu/Main Menu/main_menu.gd" id="1_20c1s"]
+[ext_resource type="Script" uid="uid://ctt1f4pr6mnxu" path="res://Menu/Game Won/game_won.gd" id="1_phsy6"]
 
-[node name="GameWon" type="Control"]
-layout_mode = 3
-anchors_preset = 0
-script = ExtResource("1_20c1s")
+[node name="GameWon" type="CanvasLayer"]
+script = ExtResource("1_phsy6")
 
 [node name="TitleLabel" type="Label" parent="."]
 offset_left = 7.0
@@ -28,7 +26,9 @@ text = "Start"
 
 [node name="Quit" type="Button" parent="Options"]
 layout_mode = 2
-text = "Toggle Fullscreen"
+text = "Exit"
 
+[connection signal="pressed" from="Options/Restart" to="." method="_on_restart_pressed"]
 [connection signal="pressed" from="Options/Restart" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="Options/Quit" to="." method="_on_quit_pressed"]
 [connection signal="pressed" from="Options/Quit" to="." method="_on_fullscreen_button_pressed"]

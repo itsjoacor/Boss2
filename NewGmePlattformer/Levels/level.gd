@@ -5,6 +5,7 @@ extends Node2D
 var is_paused := false
 
 func _ready(): # <-- este nodo escucha tecla aunque el juego esté en pausa
+
 	$HUD.level(level_num)
 	set_gems_label()
 	for gem in $Gems.get_children():
@@ -14,10 +15,15 @@ func _ready(): # <-- este nodo escucha tecla aunque el juego esté en pausa
 	pause_menu.visible = false
 	pause_menu.set_process_mode(Node.PROCESS_MODE_ALWAYS)
 	set_process_mode(Node.PROCESS_MODE_ALWAYS)
+	pause_menu.resume_requested.connect(_on_resume_requested)
 
+	get_tree().root.add_child(pause_menu)
+	
 
-
-
+func _on_resume_requested():
+	is_paused = false
+	get_tree().paused = false
+	pause_menu.visible = false
 
 
 func _on_gem_collected():
@@ -31,6 +37,18 @@ func _on_door_player_entered(level):
 
 func _input(event):
 	if event.is_action_pressed("pause"):
-		is_paused = !is_paused
-		get_tree().paused = is_paused
-		pause_menu.visible = is_paused
+		if get_tree().paused:
+			_resume_game()
+		else:
+			_pause_game()
+
+func _pause_game():
+	get_tree().paused = true
+	pause_menu.visible = true  # Show the pause menu
+
+func _resume_game():
+	get_tree().paused = false
+	pause_menu.visible = false # Hide the pause menu
+
+func _process(delta):
+	print("Paused state: ", get_tree().paused)

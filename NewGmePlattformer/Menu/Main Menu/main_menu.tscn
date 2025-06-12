@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://lsojvp4lo2es" path="res://Menu/Main Menu/main_menu.gd" id="1_r02ye"]
 
-[node name="MainMenu" type="Node2D"]
+[node name="MainMenu" type="CanvasLayer"]
 script = ExtResource("1_r02ye")
 
 [node name="TitleLabel" type="Label" parent="."]
@@ -33,5 +33,5 @@ layout_mode = 2
 text = "Exit"
 
 [connection signal="pressed" from="Options/Comenzar" to="." method="_on_start_button_pressed"]
-[connection signal="pressed" from="Options/Reglas" to="." method="_on_fullscreen_button_pressed"]
+[connection signal="pressed" from="Options/Reglas" to="." method="_on_reglas_pressed"]
 [connection signal="pressed" from="Options/Exit" to="." method="_on_quit_button_pressed"]

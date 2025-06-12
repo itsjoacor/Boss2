@@ -1,0 +1,32 @@
+[gd_scene load_steps=2 format=3 uid="uid://df88088ffsrkl"]
+
+[ext_resource type="Script" uid="uid://5saj5wqj5gmf" path="res://Menu/Rules/rules.gd" id="1_ui552"]
+
+[node name="Rules" type="CanvasLayer"]
+script = ExtResource("1_ui552")
+
+[node name="TitleLabel" type="Label" parent="."]
+offset_left = 7.0
+offset_top = 45.0
+offset_right = 1155.0
+offset_bottom = 71.0
+theme_type_variation = &"HeaderLarge"
+text = "Reglas"
+horizontal_alignment = 1
+
+[node name="Options" type="VBoxContainer" parent="."]
+offset_left = 512.0
+offset_top = 226.0
+offset_right = 654.0
+offset_bottom = 330.0
+
+[node name="Atras" type="Button" parent="Options"]
+layout_mode = 2
+text = "Atras"
+
+[node name="Exit" type="Button" parent="Options"]
+layout_mode = 2
+text = "Exit"
+
+[connection signal="pressed" from="Options/Atras" to="." method="_on_atras_pressed"]
+[connection signal="pressed" from="Options/Exit" to="." method="_on_exit_pressed"]

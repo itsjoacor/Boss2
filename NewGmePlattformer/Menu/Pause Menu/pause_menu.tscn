@@ -2,18 +2,14 @@
 
 [ext_resource type="Script" uid="uid://dy8xyevtan8w3" path="res://Menu/Pause Menu/pause_menu.gd" id="1_1nr6k"]
 
-[node name="PauseMenu" type="Control"]
-layout_mode = 3
-anchors_preset = 0
+[node name="PauseMenu" type="CanvasLayer"]
 script = ExtResource("1_1nr6k")
 
 [node name="TextureRect" type="TextureRect" parent="."]
-layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="TitleLabel" type="Label" parent="."]
-layout_mode = 0
 offset_left = 7.0
 offset_top = 45.0
 offset_right = 1155.0
@@ -23,7 +19,6 @@ text = "Pause menu"
 horizontal_alignment = 1
 
 [node name="CenterContainer" type="VBoxContainer" parent="."]
-layout_mode = 0
 offset_left = 512.0
 offset_top = 226.0
 offset_right = 654.0

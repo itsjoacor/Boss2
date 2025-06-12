@@ -2,13 +2,10 @@
 
 [ext_resource type="Script" uid="uid://bfxi6bsyxdwm1" path="res://Menu/Game Over/game_over.gd" id="1_yvn6w"]
 
-[node name="Game Over" type="Control"]
-layout_mode = 3
-anchors_preset = 0
+[node name="Game Over" type="CanvasLayer"]
 script = ExtResource("1_yvn6w")
 
 [node name="TitleLabel" type="Label" parent="."]
-layout_mode = 0
 offset_left = 7.0
 offset_top = 45.0
 offset_right = 1155.0
@@ -18,7 +15,6 @@ text = "Ups! Perdiste"
 horizontal_alignment = 1
 
 [node name="Options" type="VBoxContainer" parent="."]
-layout_mode = 0
 offset_left = 512.0
 offset_top = 226.0
 offset_right = 654.0
@@ -32,5 +28,5 @@ text = "Restart"
 layout_mode = 2
 text = "Quit"
 
-[connection signal="pressed" from="Options/RetryButton" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="Options/RetryButton" to="." method="_on_retry_button_pressed"]
 [connection signal="pressed" from="Options/Quit" to="." method="_on_quit_pressed"]
