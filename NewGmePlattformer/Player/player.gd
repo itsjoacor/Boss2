@@ -5,8 +5,12 @@ const JUMP_VELOCITY = -400.0
 
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
+@export var death_layer := 4
+
 func _ready():
-	collision_mask = 2  # Must match TileMap's layer
+		# Existing setup...
+	collision_layer = 4 # Player now exists on layer 4
+	collision_mask = 1 | 2         # Keep original mask for TileMap
 	
 func _physics_process(delta):
 	if not is_on_floor():
@@ -32,3 +36,4 @@ func _physics_process(delta):
 		$AnimatedSprite2D.play("jump")
 
 	move_and_slide()
+	

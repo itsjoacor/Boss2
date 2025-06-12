@@ -1,14 +1,8 @@
-extends Node2D
+extends Node
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	print("MainMenu ready!")
-	$Options/StartButton.grab_focus()
-	
-	if !OS.has_feature("pc"):
-		$Options/FullscreenButton.hide()
-		$Options/QuitButton.hide()
-
+	pass
 func _on_start_button_pressed():
 	get_tree().change_scene_to_file("res://Levels/level_1.tscn")
 

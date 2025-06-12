@@ -3,12 +3,13 @@ extends Area2D
 signal gem_collected
 
 func _ready():
-	add_to_group("gems")
-	collision_layer = 0
-	collision_mask = 1  # Detect player only
-
+	# Gems exist on layer 1 and detect layer 4 (player)
+	collision_layer = 1
+	collision_mask = 4
+	
 func _on_body_entered(body):
 	if body.name == "Player":
+		Global.gems_collected += 1
 		gem_collected.emit()
 		$CollectedSfx.play()
 		hide()
