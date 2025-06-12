@@ -1,16 +1,12 @@
 
 extends Control
 
-func _ready() -> void:
-	pause_mode = Node.PAUSE_MODE_PROCESS
-	$CenterContainer/Panel/VBoxContainer/Resume.pressed.connect(_on_resume_pressed)
-	$CenterContainer/Panel/VBoxContainer/Restart.pressed.connect(_on_restart_pressed)
-	$CenterContainer/Panel/VBoxContainer/Quit.pressed.connect(_on_quit_pressed)
-
 
 func _on_resume_pressed():
 	get_tree().paused = false
 	visible = false
+	get_tree().get_root().get_node("PauseMenu").is_paused = false  # ⚠️ Cambiá "Main" por tu nodo donde está is_paused
+
 
 func _on_restart_pressed():
 	get_tree().paused = false

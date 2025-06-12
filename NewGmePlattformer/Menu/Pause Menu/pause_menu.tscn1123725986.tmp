@@ -31,15 +31,15 @@ offset_bottom = 465.0
 
 [node name="Resume" type="Button" parent="CenterContainer"]
 layout_mode = 2
-text = "Resumir"
+text = "Start"
 
 [node name="Restart" type="Button" parent="CenterContainer"]
 layout_mode = 2
-text = "Reiniciar"
+text = "Toggle Fullscreen"
 
 [node name="Quit" type="Button" parent="CenterContainer"]
 layout_mode = 2
-text = "Exit"
+text = "Quit"
 
 [connection signal="pressed" from="CenterContainer/Resume" to="." method="_on_resume_pressed"]
 [connection signal="pressed" from="CenterContainer/Restart" to="." method="_on_restart_pressed"]

@@ -8,7 +8,8 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 @export var death_layer := 4
 
 func _ready():
-		# Existing setup...
+	set_process_mode(Node.PROCESS_MODE_PAUSABLE)
+
 	collision_layer = 4 # Player now exists on layer 4
 	collision_mask = 1 | 2         # Keep original mask for TileMap
 	
