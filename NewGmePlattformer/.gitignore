@@ -1,3 +1,5 @@
 # Godot 4+ specific ignores
 .godot/
 exports
+NewGmePlattformer/Ninja-Hero-V1.exe
+NewGmePlattformer/assets/Ninja-hero.zip
