@@ -19,3 +19,7 @@ func _on_retry_button_pressed():
 
 func _on_quit_pressed() -> void:
 		get_tree().quit()
+
+
+func _on_menu_principal_pressed() -> void:
+	get_tree().change_scene_to_file("res://Menu/Main Menu/main_menu.tscn")

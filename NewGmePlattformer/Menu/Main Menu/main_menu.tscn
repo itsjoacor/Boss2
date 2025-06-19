@@ -2,14 +2,14 @@
 
 [ext_resource type="Script" uid="uid://lsojvp4lo2es" path="res://Menu/Main Menu/main_menu.gd" id="1_r02ye"]
 [ext_resource type="FontFile" uid="uid://c50a1jx4w8g1" path="res://assets/Fonts/Xolonium-Regular.ttf" id="2_tvur4"]
-[ext_resource type="Texture2D" uid="uid://dc4s8qipykbdi" path="res://assets/1111.jpg" id="2_vf21d"]
+[ext_resource type="Texture2D" uid="uid://c2iinvpqxk5so" path="res://assets/player.png" id="2_vf21d"]
 
 [node name="MainMenu" type="CanvasLayer"]
 script = ExtResource("1_r02ye")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(577, 325.5)
-scale = Vector2(1.87908, 1.97853)
+position = Vector2(577.5, 326.5)
+scale = Vector2(18.0156, 10.1406)
 texture = ExtResource("2_vf21d")
 
 [node name="TitleLabel" type="Label" parent="."]
@@ -24,25 +24,28 @@ text = "Bienvenidos!"
 horizontal_alignment = 1
 
 [node name="Options" type="VBoxContainer" parent="."]
-offset_left = 478.0
-offset_top = 290.0
-offset_right = 682.0
-offset_bottom = 429.0
+offset_left = 436.0
+offset_top = 339.0
+offset_right = 717.0
+offset_bottom = 431.0
 
 [node name="Comenzar" type="Button" parent="Options"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_tvur4")
+theme_override_font_sizes/font_size = 30
 text = "Comenzar"
 
 [node name="Reglas" type="Button" parent="Options"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_tvur4")
+theme_override_font_sizes/font_size = 30
 text = "Reglas"
 
 [node name="Exit" type="Button" parent="Options"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_tvur4")
-text = "Exit"
+theme_override_font_sizes/font_size = 30
+text = "Salir"
 
 [connection signal="pressed" from="Options/Comenzar" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="Options/Reglas" to="." method="_on_reglas_pressed"]

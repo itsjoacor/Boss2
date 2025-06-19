@@ -1,40 +1,58 @@
-[gd_scene load_steps=2 format=3 uid="uid://dpdga7hj13xmu"]
+[gd_scene load_steps=4 format=3 uid="uid://dpdga7hj13xmu"]
 
 [ext_resource type="Script" uid="uid://dy8xyevtan8w3" path="res://Menu/Pause Menu/pause_menu.gd" id="1_1nr6k"]
+[ext_resource type="Texture2D" uid="uid://c2iinvpqxk5so" path="res://assets/player.png" id="2_pc84b"]
+[ext_resource type="FontFile" uid="uid://c50a1jx4w8g1" path="res://assets/Fonts/Xolonium-Regular.ttf" id="3_hf0nn"]
 
 [node name="PauseMenu" type="CanvasLayer"]
 script = ExtResource("1_1nr6k")
 
-[node name="TextureRect" type="TextureRect" parent="."]
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(583.5, 329)
+scale = Vector2(18.0469, 10.3438)
+texture = ExtResource("2_pc84b")
 
 [node name="TitleLabel" type="Label" parent="."]
 offset_left = 7.0
-offset_top = 45.0
+offset_top = 146.0
 offset_right = 1155.0
-offset_bottom = 71.0
+offset_bottom = 183.0
 theme_type_variation = &"HeaderLarge"
+theme_override_fonts/font = ExtResource("3_hf0nn")
+theme_override_font_sizes/font_size = 30
 text = "Pause menu"
 horizontal_alignment = 1
 
 [node name="CenterContainer" type="VBoxContainer" parent="."]
-offset_left = 512.0
-offset_top = 226.0
-offset_right = 654.0
-offset_bottom = 465.0
+offset_left = 444.0
+offset_top = 299.0
+offset_right = 715.0
+offset_bottom = 409.0
 
 [node name="Resume" type="Button" parent="CenterContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_hf0nn")
+theme_override_font_sizes/font_size = 30
 text = "Resumir"
 
 [node name="Restart" type="Button" parent="CenterContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_hf0nn")
+theme_override_font_sizes/font_size = 30
 text = "Reiniciar"
 
 [node name="Quit" type="Button" parent="CenterContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_hf0nn")
+theme_override_font_sizes/font_size = 30
 text = "Exit"
+
+[node name="Label" type="Label" parent="."]
+offset_left = 459.0
+offset_top = 512.0
+offset_right = 706.0
+offset_bottom = 535.0
+text = "Presionar P o Esc para reanudar"
 
 [connection signal="pressed" from="CenterContainer/Resume" to="." method="_on_resume_pressed"]
 [connection signal="pressed" from="CenterContainer/Restart" to="." method="_on_restart_pressed"]

@@ -2,14 +2,14 @@
 
 [ext_resource type="Script" uid="uid://5saj5wqj5gmf" path="res://Menu/Rules/rules.gd" id="1_ui552"]
 [ext_resource type="FontFile" uid="uid://c50a1jx4w8g1" path="res://assets/Fonts/Xolonium-Regular.ttf" id="2_gbofm"]
-[ext_resource type="Texture2D" uid="uid://dc4s8qipykbdi" path="res://assets/1111.jpg" id="2_wd6ui"]
+[ext_resource type="Texture2D" uid="uid://c2iinvpqxk5so" path="res://assets/player.png" id="2_wd6ui"]
 
 [node name="Rules" type="CanvasLayer"]
 script = ExtResource("1_ui552")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(577, 323.5)
-scale = Vector2(1.88562, 1.97853)
+position = Vector2(578.5, 328.5)
+scale = Vector2(18.1094, 10.1719)
 texture = ExtResource("2_wd6ui")
 
 [node name="TitleLabel" type="Label" parent="."]
@@ -23,13 +23,13 @@ text = "Reglas"
 horizontal_alignment = 1
 
 [node name="Rules" type="Label" parent="."]
-offset_left = 51.0
-offset_top = 123.0
-offset_right = 1138.0
-offset_bottom = 702.0
+offset_left = -146.0
+offset_top = 93.0
+offset_right = 1365.0
+offset_bottom = 672.0
 theme_type_variation = &"HeaderLarge"
 theme_override_fonts/font = ExtResource("2_gbofm")
-text = "Recoge gemas y llega al final del nivel sin caerte.
+text = "Recoge y llega al final del nivel sin caerte.
 Controles:
 Flechas / A/D: Moverse.
 Espacio / Click Izquierdo: Saltar.
@@ -52,6 +52,7 @@ offset_bottom = 683.0
 [node name="Atras" type="Button" parent="Options"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_gbofm")
+theme_override_font_sizes/font_size = 30
 text = "Atras"
 
 [node name="Options2" type="VBoxContainer" parent="."]
@@ -60,9 +61,12 @@ offset_top = 577.0
 offset_right = 1084.0
 offset_bottom = 608.0
 
-[node name="Exit" type="Button" parent="Options2"]
+[node name="Comenzar" type="Button" parent="Options2"]
 layout_mode = 2
-text = "Exit"
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_gbofm")
+theme_override_font_sizes/font_size = 30
+text = "Comenzar"
 
 [connection signal="pressed" from="Options/Atras" to="." method="_on_atras_pressed"]
-[connection signal="pressed" from="Options2/Exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="Options2/Comenzar" to="." method="_on_comenzar_pressed"]

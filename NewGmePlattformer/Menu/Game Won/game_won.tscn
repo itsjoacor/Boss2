@@ -1,16 +1,16 @@
 [gd_scene load_steps=4 format=3 uid="uid://mk4oxdd7r3wk"]
 
 [ext_resource type="Script" uid="uid://ctt1f4pr6mnxu" path="res://Menu/Game Won/game_won.gd" id="1_phsy6"]
-[ext_resource type="Texture2D" uid="uid://dc4s8qipykbdi" path="res://assets/1111.jpg" id="2_s1vo1"]
+[ext_resource type="Texture2D" uid="uid://c2iinvpqxk5so" path="res://assets/player.png" id="2_uvcp7"]
 [ext_resource type="FontFile" uid="uid://c50a1jx4w8g1" path="res://assets/Fonts/Xolonium-Regular.ttf" id="3_uvcp7"]
 
 [node name="GameWon" type="CanvasLayer"]
 script = ExtResource("1_phsy6")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(576, 326.5)
-scale = Vector2(1.88235, 1.99693)
-texture = ExtResource("2_s1vo1")
+position = Vector2(576, 327)
+scale = Vector2(18, 10.1875)
+texture = ExtResource("2_uvcp7")
 
 [node name="TitleLabel" type="Label" parent="."]
 offset_left = 5.0
@@ -24,22 +24,32 @@ text = "Ganaste!"
 horizontal_alignment = 1
 
 [node name="Options" type="VBoxContainer" parent="."]
-offset_left = 512.0
-offset_top = 226.0
-offset_right = 654.0
-offset_bottom = 465.0
+offset_left = 410.0
+offset_top = 267.0
+offset_right = 754.0
+offset_bottom = 506.0
 
 [node name="Restart" type="Button" parent="Options"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_uvcp7")
-text = "Restart"
+theme_override_font_sizes/font_size = 30
+text = "Reiniciar"
+
+[node name="Menu principal" type="Button" parent="Options"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_uvcp7")
+theme_override_font_sizes/font_size = 30
+text = "Menu principal"
 
 [node name="Quit" type="Button" parent="Options"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_uvcp7")
-text = "Exit"
+theme_override_font_sizes/font_size = 30
+text = "Salir"
 
-[connection signal="pressed" from="Options/Restart" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="Options/Restart" to="." method="_on_restart_pressed"]
-[connection signal="pressed" from="Options/Quit" to="." method="_on_fullscreen_button_pressed"]
+[connection signal="pressed" from="Options/Restart" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="Options/Menu principal" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="Options/Menu principal" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="Options/Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="Options/Quit" to="." method="_on_fullscreen_button_pressed"]
