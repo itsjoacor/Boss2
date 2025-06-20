@@ -1,17 +1,17 @@
-[gd_scene load_steps=12 format=4 uid="uid://b8s2j0r7a5wl3"]
+[gd_scene load_steps=12 format=4 uid="uid://dr3shcj1f1hjq"]
 
-[ext_resource type="Script" uid="uid://pxkrvdsc8swb" path="res://Levels/level.gd" id="1_ay5qi"]
-[ext_resource type="Texture2D" uid="uid://c2iinvpqxk5so" path="res://assets/player.png" id="2_ck3gp"]
-[ext_resource type="Texture2D" uid="uid://cbmb5cipyhb2u" path="res://assets/Terrain (16x16).png" id="2_fa81k"]
-[ext_resource type="PackedScene" uid="uid://bdyp538fqygcq" path="res://HUD/hud.tscn" id="3_ck3gp"]
-[ext_resource type="PackedScene" uid="uid://d8wkk8dncdhg" path="res://DeathZone/DeathZone.tscn" id="3_fa81k"]
-[ext_resource type="PackedScene" uid="uid://cboi8hec4yf0c" path="res://Player/player.tscn" id="4_trpa2"]
-[ext_resource type="PackedScene" uid="uid://clikcsot5ncta" path="res://Door/door.tscn" id="5_4t7ew"]
-[ext_resource type="PackedScene" uid="uid://dypev0qrj3e6s" path="res://Gem/gem.tscn" id="6_oojpf"]
-[ext_resource type="AudioStream" uid="uid://1vgh2yhyxy3a" path="res://assets/actiontheme-v3.ogg" id="7_7cdb2"]
+[ext_resource type="Script" uid="uid://pxkrvdsc8swb" path="res://Levels/level.gd" id="1_ben3k"]
+[ext_resource type="Texture2D" uid="uid://c2iinvpqxk5so" path="res://assets/player.png" id="2_77xid"]
+[ext_resource type="Texture2D" uid="uid://cbmb5cipyhb2u" path="res://assets/Terrain (16x16).png" id="3_m0m22"]
+[ext_resource type="PackedScene" uid="uid://d8wkk8dncdhg" path="res://DeathZone/DeathZone.tscn" id="4_utic7"]
+[ext_resource type="PackedScene" uid="uid://bdyp538fqygcq" path="res://HUD/hud.tscn" id="5_x4mg1"]
+[ext_resource type="PackedScene" uid="uid://cboi8hec4yf0c" path="res://Player/player.tscn" id="6_6iucq"]
+[ext_resource type="PackedScene" uid="uid://clikcsot5ncta" path="res://Door/door.tscn" id="7_fcg6d"]
+[ext_resource type="PackedScene" uid="uid://dypev0qrj3e6s" path="res://Gem/gem.tscn" id="8_3227t"]
+[ext_resource type="AudioStream" uid="uid://1vgh2yhyxy3a" path="res://assets/actiontheme-v3.ogg" id="9_lk1ng"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0urlm"]
-texture = ExtResource("2_fa81k")
+texture = ExtResource("3_m0m22")
 0:8/0 = 0
 0:8/0/terrain_set = 0
 0:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
@@ -108,7 +108,7 @@ terrain_set_0/terrain_0/color = Color(0.5, 0.34375, 0.25, 1)
 sources/0 = SubResource("TileSetAtlasSource_0urlm")
 
 [node name="Level3" type="Node2D"]
-script = ExtResource("1_ay5qi")
+script = ExtResource("1_ben3k")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_right = 40.0
@@ -117,21 +117,21 @@ offset_bottom = 40.0
 [node name="Sprite2D" type="Sprite2D" parent="TextureRect"]
 position = Vector2(946, 323)
 scale = Vector2(30.5625, 11.0938)
-texture = ExtResource("2_ck3gp")
+texture = ExtResource("2_77xid")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 tile_map_data = PackedByteArray("AAAXAA4AAAABAAkAAAAYAA4AAAADAAgAAAAYAA8AAAACAAoAAAAXAA8AAAABAAoAAAAWAA8AAAAAAAoAAAAWAA4AAAAAAAkAAAAWAA0AAAAAAAkAAAAXAA0AAAABAAkAAAAYAA0AAAABAAkAAAAWAAwAAAAAAAgAAAAXAAwAAAABAAgAAAAYAAwAAAABAAgAAAAZAA0AAAABAAkAAAAZAA4AAAABAAoAAAAZAAwAAAABAAgAAAAaAA0AAAABAAkAAAAaAA4AAAABAAoAAAAaAAwAAAABAAgAAAAbAA0AAAABAAkAAAAbAA4AAAAEAAgAAAAbAAwAAAABAAgAAAAcAA0AAAABAAkAAAAcAA4AAAABAAkAAAAcAAwAAAABAAgAAAAiAA4AAAAAAAoAAAAjAA0AAAABAAkAAAAjAA4AAAABAAoAAAAjAAwAAAABAAgAAAAkAA0AAAABAAkAAAAkAA4AAAABAAoAAAAkAAwAAAABAAgAAAAlAA0AAAABAAkAAAAlAA4AAAABAAoAAAAlAAwAAAABAAgAAAAmAA0AAAABAAkAAAAmAA4AAAABAAoAAAAmAAwAAAABAAgAAAAnAA0AAAABAAkAAAAnAA4AAAAEAAgAAAAnAAwAAAABAAgAAAAoAA0AAAABAAkAAAAoAA4AAAABAAkAAAAoAAwAAAABAAgAAAApAA0AAAACAAkAAAApAA4AAAADAAkAAAApAAwAAAACAAgAAAApAA8AAAABAAkAAAAoAA8AAAABAAkAAAAnAA8AAAAAAAkAAAApABAAAAABAAkAAAAoABAAAAABAAkAAAAnABAAAAAAAAkAAAAqAA8AAAABAAkAAAAqABAAAAABAAkAAAAqAA4AAAABAAgAAAArAA8AAAABAAkAAAArABAAAAABAAkAAAArAA4AAAABAAgAAAAsAA8AAAABAAkAAAAsABAAAAABAAkAAAAsAA4AAAAEAAkAAAAtAA8AAAABAAkAAAAtABAAAAABAAkAAAAtAA4AAAABAAkAAAAuAA8AAAABAAkAAAAuABAAAAABAAkAAAAuAA4AAAADAAkAAAAvAA8AAAABAAkAAAAvABAAAAABAAkAAAAvAA4AAAABAAgAAAAwAA8AAAABAAkAAAAwABAAAAABAAkAAAAwAA4AAAABAAgAAAAxAA8AAAABAAkAAAAxABAAAAABAAkAAAAxAA4AAAABAAgAAAAyAA8AAAABAAkAAAAyABAAAAABAAkAAAAyAA4AAAABAAgAAAAzAA8AAAACAAkAAAAzABAAAAACAAkAAAAzAA4AAAACAAgAAAApABEAAAABAAkAAAAoABEAAAABAAkAAAAnABEAAAAAAAkAAAAqABEAAAABAAkAAAAqABIAAAABAAoAAAApABIAAAABAAoAAAAoABIAAAABAAoAAAAnABIAAAAAAAoAAAArABEAAAABAAkAAAArABIAAAABAAoAAAAsABEAAAABAAkAAAAsABIAAAABAAoAAAAtABEAAAABAAkAAAAtABIAAAABAAoAAAAuABEAAAABAAkAAAAuABIAAAABAAoAAAAvABEAAAABAAkAAAAvABIAAAABAAoAAAAwABEAAAABAAkAAAAxABEAAAABAAkAAAAyABEAAAABAAkAAAAzABEAAAACAAkAAAAzABIAAAACAAoAAAAyABIAAAABAAoAAAAxABIAAAABAAoAAAAwABIAAAABAAoAAAA3AA8AAAABAAkAAAA4AA8AAAABAAkAAAA4ABAAAAABAAkAAAA3ABAAAAAEAAgAAAA2ABAAAAAAAAoAAAA2AA8AAAAAAAkAAAA2AA4AAAAAAAgAAAA3AA4AAAABAAgAAAA4AA4AAAABAAgAAAA5AA8AAAABAAkAAAA5ABAAAAADAAgAAAA5AA4AAAABAAgAAAA6AA8AAAABAAkAAAA6ABAAAAABAAoAAAA6AA4AAAABAAgAAAA7AA8AAAABAAkAAAA7ABAAAAABAAoAAAA7AA4AAAABAAgAAAA8AA8AAAACAAkAAAA8ABAAAAACAAoAAAA8AA4AAAACAAgAAABCAA8AAAABAAkAAABDAA8AAAACAAkAAABDABAAAAACAAoAAABCABAAAAABAAoAAABBABAAAAAAAAoAAABBAA8AAAAEAAgAAABBAA4AAAABAAkAAABCAA4AAAADAAkAAABDAA4AAAACAAgAAABEABAAAAABAAkAAABFABAAAAACAAkAAABFABEAAAACAAoAAABEABEAAAABAAoAAABDABEAAAAAAAoAAABEAA8AAAAAAAgAAABFAA8AAAACAAgAAABGAA4AAAABAAkAAABHAA4AAAABAAkAAABHAA8AAAABAAoAAABGAA8AAAABAAoAAABFAA4AAAAAAAoAAABFAA0AAAAAAAgAAABGAA0AAAABAAgAAABHAA0AAAABAAgAAABIAA4AAAABAAkAAABIAA8AAAABAAoAAABIAA0AAAABAAgAAABJAA4AAAABAAkAAABJAA8AAAABAAoAAABJAA0AAAABAAgAAABKAA4AAAABAAkAAABKAA8AAAABAAoAAABKAA0AAAAEAAkAAABLAA4AAAABAAkAAABLAA8AAAABAAoAAAAiAA0AAAAAAAkAAAAiAAwAAAAAAAgAAAAdAA4AAAACAAkAAAAdAA8AAAACAAoAAAAcAA8AAAABAAoAAAAbAA8AAAAAAAoAAAAdAA0AAAACAAkAAAAdAAwAAAACAAgAAAAsAA0AAAAAAAkAAAAtAA0AAAABAAkAAAAuAA0AAAACAAkAAAAsAAwAAAAAAAkAAAAtAAwAAAABAAkAAAAuAAwAAAACAAkAAAAsAAsAAAAAAAkAAAAtAAsAAAABAAkAAAAuAAsAAAACAAkAAAAsAAoAAAAAAAgAAAAtAAoAAAABAAgAAAAuAAoAAAACAAgAAAA5ABEAAAACAAoAAAA4ABEAAAABAAoAAAA3ABEAAAAAAAoAAABAAA8AAAAAAAoAAABAAA4AAAAEAAgAAABAAA0AAAABAAkAAABBAA0AAAABAAkAAABCAA0AAAACAAkAAABAAAwAAAADAAkAAABBAAwAAAABAAgAAABCAAwAAAACAAgAAAA/AA4AAAABAAoAAAA/AA0AAAABAAkAAAA/AAwAAAABAAkAAAA+AA4AAAAAAAoAAAA+AA0AAAAAAAkAAAA+AAwAAAAAAAkAAAA+AAsAAAAAAAgAAAA/AAsAAAABAAgAAABAAAsAAAACAAgAAABLAA0AAAABAAkAAABMAA0AAAACAAkAAABMAA4AAAACAAkAAABKAAwAAAAAAAgAAABLAAwAAAABAAgAAABMAAwAAAACAAgAAABMAA8AAAACAAoAAABTAA4AAAABAAkAAABUAA4AAAACAAkAAABUAA8AAAADAAkAAABTAA8AAAABAAkAAABSAA8AAAAAAAkAAABSAA4AAAAAAAkAAABSAA0AAAAAAAgAAABTAA0AAAABAAgAAABUAA0AAAACAAgAAABUABAAAAABAAkAAABTABAAAAABAAkAAABSABAAAAAAAAkAAABUABEAAAABAAoAAABTABEAAAABAAoAAABSABEAAAAAAAoAAABVABAAAAABAAkAAABVABEAAAABAAoAAABVAA8AAAABAAgAAABWABAAAAABAAkAAABWABEAAAABAAoAAABWAA8AAAABAAgAAABXABAAAAABAAkAAABXABEAAAABAAoAAABXAA8AAAABAAgAAABYABAAAAABAAkAAABYABEAAAAEAAgAAABYAA8AAAABAAgAAABZABAAAAABAAkAAABZABEAAAABAAkAAABZAA8AAAABAAgAAABaABAAAAACAAkAAABaABEAAAACAAkAAABaAA8AAAACAAgAAABaABIAAAACAAoAAABZABIAAAABAAoAAABYABIAAAAAAAoAAABgAA0AAAABAAkAAABhAA0AAAABAAkAAABhAA4AAAABAAoAAABgAA4AAAABAAoAAABfAA4AAAAAAAoAAABfAA0AAAAAAAkAAABfAAwAAAAAAAgAAABgAAwAAAABAAgAAABhAAwAAAABAAgAAABiAA0AAAABAAkAAABiAA4AAAABAAoAAABiAAwAAAABAAgAAABjAA0AAAACAAkAAABjAA4AAAACAAoAAABjAAwAAAACAAgAAAAfAAcAAAABAAkAAAAgAAcAAAABAAkAAAAgAAgAAAABAAoAAAAfAAgAAAABAAoAAAAeAAgAAAAAAAoAAAAeAAcAAAAAAAkAAAAeAAYAAAAAAAgAAAAfAAYAAAABAAgAAAAgAAYAAAABAAgAAAAhAAcAAAABAAkAAAAhAAgAAAABAAoAAAAhAAYAAAABAAgAAAAiAAcAAAABAAkAAAAiAAgAAAABAAoAAAAiAAYAAAABAAgAAAAjAAcAAAACAAkAAAAjAAgAAAACAAoAAAAjAAYAAAACAAgAAAA=")
 tile_set = SubResource("TileSet_f4pg2")
 
-[node name="DeathZone" parent="." instance=ExtResource("3_fa81k")]
+[node name="DeathZone" parent="." instance=ExtResource("4_utic7")]
 position = Vector2(15, 264)
 
-[node name="HUD" parent="." instance=ExtResource("3_ck3gp")]
+[node name="HUD" parent="." instance=ExtResource("5_x4mg1")]
 
-[node name="Player" parent="." instance=ExtResource("4_trpa2")]
+[node name="Player" parent="." instance=ExtResource("6_6iucq")]
 position = Vector2(400, 184)
 
-[node name="Door" parent="." instance=ExtResource("5_4t7ew")]
+[node name="Door" parent="." instance=ExtResource("7_fcg6d")]
 position = Vector2(1559, 181)
 target_level = 5
 
@@ -140,33 +140,33 @@ offset_left = -24.0
 offset_top = -29.0
 offset_right = 30.0
 offset_bottom = -3.0
-text = "Nivel 4"
+text = "Escape"
 
 [node name="Gems" type="Node" parent="."]
 
-[node name="Gem" parent="Gems" instance=ExtResource("6_oojpf")]
+[node name="Gem" parent="Gems" instance=ExtResource("8_3227t")]
 position = Vector2(624, 160)
 
-[node name="Gem2" parent="Gems" instance=ExtResource("6_oojpf")]
+[node name="Gem2" parent="Gems" instance=ExtResource("8_3227t")]
 position = Vector2(680, 152)
 
-[node name="Gem3" parent="Gems" instance=ExtResource("6_oojpf")]
+[node name="Gem3" parent="Gems" instance=ExtResource("8_3227t")]
 position = Vector2(712, 136)
 
-[node name="Gem5" parent="Gems" instance=ExtResource("6_oojpf")]
+[node name="Gem5" parent="Gems" instance=ExtResource("8_3227t")]
 position = Vector2(856, 184)
 
-[node name="Gem8" parent="Gems" instance=ExtResource("6_oojpf")]
+[node name="Gem8" parent="Gems" instance=ExtResource("8_3227t")]
 position = Vector2(1104, 184)
 
-[node name="Gem9" parent="Gems" instance=ExtResource("6_oojpf")]
+[node name="Gem9" parent="Gems" instance=ExtResource("8_3227t")]
 position = Vector2(1168, 192)
 
-[node name="Gem10" parent="Gems" instance=ExtResource("6_oojpf")]
+[node name="Gem10" parent="Gems" instance=ExtResource("8_3227t")]
 position = Vector2(1411, 220)
 
 [node name="Music" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("7_7cdb2")
+stream = ExtResource("9_lk1ng")
 volume_db = -8.0
 autoplay = true
 
