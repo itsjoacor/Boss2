@@ -18,8 +18,9 @@ offset_top = 146.0
 offset_right = 1155.0
 offset_bottom = 183.0
 theme_type_variation = &"HeaderLarge"
+theme_override_colors/font_color = Color(0.392157, 0.847059, 0.54902, 1)
 theme_override_fonts/font = ExtResource("3_hf0nn")
-theme_override_font_sizes/font_size = 30
+theme_override_font_sizes/font_size = 45
 text = "Pause menu"
 horizontal_alignment = 1
 

@@ -14,6 +14,7 @@ func _on_fullscreen_button_pressed():
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
 
 func _on_quit_button_pressed():
+	Global.gems_collected = 0  # Reset gems
 	get_tree().quit()
 
 

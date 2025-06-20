@@ -18,4 +18,5 @@ func _on_quit_pressed() -> void:
 
 
 func _on_restart_pressed() -> void:
+	Global.gems_collected = 0  # Reset gems
 	get_tree().change_scene_to_file("res://Levels/level_1.tscn")

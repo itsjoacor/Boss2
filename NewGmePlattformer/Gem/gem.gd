@@ -2,8 +2,9 @@ extends Area2D
 
 signal gem_collected
 
+
+
 func _ready():
-	# Gems exist on layer 1 and detect layer 4 (player)
 	collision_layer = 1
 	collision_mask = 4
 	

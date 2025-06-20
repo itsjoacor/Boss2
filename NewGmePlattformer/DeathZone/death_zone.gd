@@ -11,4 +11,5 @@ func _on_body_entered(body):
 	if body.name == "Player":
 		# Add slight delay for better feel
 		await get_tree().create_timer(0.2).timeout  
+		Global.gems_collected = 0  # Reset gems
 		get_tree().change_scene_to_file("res://Menu/Game Over/geme_over.tscn")
