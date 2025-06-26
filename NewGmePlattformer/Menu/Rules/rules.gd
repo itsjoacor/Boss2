@@ -20,4 +20,5 @@ func _on_atras_pressed() -> void:
 
 
 func _on_comenzar_pressed() -> void:
+	Global.start_timer()
 	get_tree().change_scene_to_file("res://Levels/level_1.tscn")
