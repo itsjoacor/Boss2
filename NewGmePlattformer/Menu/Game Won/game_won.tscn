@@ -48,6 +48,24 @@ theme_override_fonts/font = ExtResource("3_uvcp7")
 theme_override_font_sizes/font_size = 30
 text = "Salir"
 
+[node name="Tiempo" type="Label" parent="."]
+offset_left = 942.0
+offset_top = 564.0
+offset_right = 1030.0
+offset_bottom = 589.0
+theme_override_colors/font_color = Color(0.392157, 0.847059, 0.54902, 1)
+theme_override_fonts/font = ExtResource("3_uvcp7")
+theme_override_font_sizes/font_size = 20
+
+[node name="Gemas" type="Label" parent="."]
+offset_left = 942.0
+offset_top = 590.0
+offset_right = 1025.0
+offset_bottom = 615.0
+theme_override_colors/font_color = Color(0.392157, 0.847059, 0.54902, 1)
+theme_override_fonts/font = ExtResource("3_uvcp7")
+theme_override_font_sizes/font_size = 20
+
 [connection signal="pressed" from="Options/Restart" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="Options/Restart" to="." method="_on_restart_pressed"]
 [connection signal="pressed" from="Options/Menu principal" to="." method="_on_start_button_pressed"]

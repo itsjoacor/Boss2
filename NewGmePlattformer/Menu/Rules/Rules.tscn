@@ -25,25 +25,24 @@ text = "Reglas"
 horizontal_alignment = 1
 
 [node name="Rules" type="Label" parent="."]
-offset_left = -146.0
+offset_left = 210.0
 offset_top = 93.0
-offset_right = 1365.0
-offset_bottom = 672.0
+offset_right = 947.0
+offset_bottom = 541.0
 theme_type_variation = &"HeaderLarge"
 theme_override_fonts/font = ExtResource("2_gbofm")
-text = "Recoge y llega al final del nivel sin caerte.
-Controles:
-Flechas / A/D: Moverse.
-Espacio / Click Izquierdo: Saltar.
+text = "
+🧍‍♂️ Movimiento
+Moverse a la izquierda con ⬅️ ó (A)
+Moverse a la derecha con ➡️ó (D)
 
-Evita caer o tocar enemigos.
-Recoge gemas para sumar puntos.
-Termina el nivel con al menos la cantidad mínima de gemas.
+🕴️ Saltar
+Saltar con ⬆️ (W), ó usando la barra espaciadora.
 
-Perderás una vida si caes o tocas un enemigo.
-Gana el juego recogiendo todas las gemas y completando los niveles."
+💎 Objetivo
+Recolectá la mayor cantidad de gemas posibles.
+Llegá al final del nivel sin caerte al vacío 🚫🕳️"
 horizontal_alignment = 1
-justification_flags = 171
 
 [node name="Options" type="VBoxContainer" parent="."]
 offset_left = 70.0

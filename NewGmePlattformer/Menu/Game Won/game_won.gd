@@ -2,7 +2,11 @@ extends CanvasLayer
 
 func _ready():
 	# Wait until the scene is fully ready
+	
 	await get_tree().process_frame
+	$Tiempo.text = "Tiempo: " + Global.get_formatted_time()
+	$Gemas.text = "Gemas: " + str(Global.gems_collected)
+	Global.stop_timer()
 	
 	# Safely get the button
 	var retry_button = $VBoxContainer/RetryButton
@@ -18,5 +22,7 @@ func _on_quit_pressed() -> void:
 
 
 func _on_restart_pressed() -> void:
+	Global.elapsed_time = 0.0
+	Global.start_timer()
 	Global.gems_collected = 0  # Reset gems
 	get_tree().change_scene_to_file("res://Levels/level_1.tscn")

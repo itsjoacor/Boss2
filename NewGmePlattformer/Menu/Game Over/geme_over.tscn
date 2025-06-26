@@ -8,7 +8,7 @@
 script = ExtResource("1_yvn6w")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(576.5, 326.5)
+position = Vector2(577.5, 326.5)
 scale = Vector2(18.0781, 10.1406)
 texture = ExtResource("2_itgon")
 
@@ -47,6 +47,24 @@ layout_mode = 2
 theme_override_fonts/font = ExtResource("3_itgon")
 theme_override_font_sizes/font_size = 30
 text = "Salir"
+
+[node name="Tiempo" type="Label" parent="."]
+offset_left = 944.0
+offset_top = 567.0
+offset_right = 1032.0
+offset_bottom = 592.0
+theme_override_colors/font_color = Color(0.392157, 0.847059, 0.54902, 1)
+theme_override_fonts/font = ExtResource("3_itgon")
+theme_override_font_sizes/font_size = 20
+
+[node name="Gemas" type="Label" parent="."]
+offset_left = 944.0
+offset_top = 593.0
+offset_right = 1027.0
+offset_bottom = 618.0
+theme_override_colors/font_color = Color(0.392157, 0.847059, 0.54902, 1)
+theme_override_fonts/font = ExtResource("3_itgon")
+theme_override_font_sizes/font_size = 20
 
 [connection signal="pressed" from="Options/RetryButton" to="." method="_on_retry_button_pressed"]
 [connection signal="pressed" from="Options/Menu Principal" to="." method="_on_menu_principal_pressed"]

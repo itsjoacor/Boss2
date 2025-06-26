@@ -124,7 +124,7 @@ tile_map_data = PackedByteArray("AAAXAA4AAAABAAkAAAAYAA4AAAABAAkAAAAYAA8AAAABAAk
 tile_set = SubResource("TileSet_f4pg2")
 
 [node name="DeathZone" parent="." instance=ExtResource("8_77x7w")]
-position = Vector2(67, 253)
+position = Vector2(68, 284)
 
 [node name="HUD" parent="." instance=ExtResource("3_dxtoi")]
 

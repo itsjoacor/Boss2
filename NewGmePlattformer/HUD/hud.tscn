@@ -7,10 +7,10 @@
 script = ExtResource("1_e2407")
 
 [node name="CurrentLevel" type="Label" parent="."]
-offset_left = 38.0
-offset_top = 44.0
-offset_right = 154.0
-offset_bottom = 81.0
+offset_left = 40.0
+offset_top = 46.0
+offset_right = 156.0
+offset_bottom = 83.0
 theme_override_colors/font_color = Color(0.392157, 0.847059, 0.54902, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
@@ -19,9 +19,9 @@ theme_override_font_sizes/font_size = 30
 text = "Level 0"
 
 [node name="GemsLabel" type="Label" parent="."]
-offset_left = 38.0
+offset_left = 40.0
 offset_top = 74.0
-offset_right = 167.0
+offset_right = 169.0
 offset_bottom = 111.0
 theme_override_colors/font_color = Color(0.392157, 0.847059, 0.54902, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
@@ -29,3 +29,15 @@ theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("2_mi5n8")
 theme_override_font_sizes/font_size = 30
 text = "Level 0"
+
+[node name="TimerLabel" type="Label" parent="."]
+offset_left = 41.0
+offset_top = 102.0
+offset_right = 170.0
+offset_bottom = 139.0
+theme_override_colors/font_color = Color(0.392157, 0.847059, 0.54902, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_mi5n8")
+theme_override_font_sizes/font_size = 30
+text = "-"
