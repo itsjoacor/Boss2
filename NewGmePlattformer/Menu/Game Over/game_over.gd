@@ -1,7 +1,8 @@
 extends CanvasLayer
 
 func _ready():
-	# Wait until the scene is fully ready
+	$Options/RetryButton.grab_focus()
+
 	await get_tree().process_frame
 	$Tiempo.text = "Tiempo: " + Global.get_formatted_time()
 	$Gemas.text = "Gemas: " + str(Global.gems_collected)

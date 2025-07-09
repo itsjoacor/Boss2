@@ -24,11 +24,19 @@ theme_override_font_sizes/font_size = 45
 text = "Pause menu"
 horizontal_alignment = 1
 
+[node name="Label" type="Label" parent="."]
+offset_left = 459.0
+offset_top = 512.0
+offset_right = 706.0
+offset_bottom = 535.0
+text = "Presionar P o Esc para reanudar"
+
 [node name="CenterContainer" type="VBoxContainer" parent="."]
 offset_left = 444.0
 offset_top = 299.0
 offset_right = 715.0
 offset_bottom = 409.0
+focus_mode = 2
 
 [node name="Resume" type="Button" parent="CenterContainer"]
 layout_mode = 2
@@ -48,13 +56,13 @@ theme_override_fonts/font = ExtResource("3_hf0nn")
 theme_override_font_sizes/font_size = 30
 text = "Exit"
 
-[node name="Label" type="Label" parent="."]
-offset_left = 459.0
-offset_top = 512.0
-offset_right = 706.0
-offset_bottom = 535.0
-text = "Presionar P o Esc para reanudar"
+[node name="MuteButton" type="Button" parent="CenterContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_hf0nn")
+theme_override_font_sizes/font_size = 30
+text = "Silenciar"
 
 [connection signal="pressed" from="CenterContainer/Resume" to="." method="_on_resume_pressed"]
 [connection signal="pressed" from="CenterContainer/Restart" to="." method="_on_restart_pressed"]
 [connection signal="pressed" from="CenterContainer/Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="CenterContainer/MuteButton" to="." method="_on_mute_button_pressed"]

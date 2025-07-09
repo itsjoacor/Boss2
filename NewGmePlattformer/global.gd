@@ -2,6 +2,8 @@ extends Node
 
 var gems_collected = 0
 var current_level = 1
+var is_muted := false
+
 
 var elapsed_time := 0.0
 var timer_running := false

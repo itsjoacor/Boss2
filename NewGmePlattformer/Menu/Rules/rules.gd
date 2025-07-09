@@ -2,7 +2,7 @@ extends CanvasLayer
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass
+	$Options/Atras.grab_focus()
 
 
 func _on_fullscreen_button_pressed():

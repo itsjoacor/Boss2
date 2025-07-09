@@ -48,6 +48,13 @@ theme_override_fonts/font = ExtResource("2_tvur4")
 theme_override_font_sizes/font_size = 30
 text = "Salir"
 
+[node name="MuteButton" type="Button" parent="Options"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_tvur4")
+theme_override_font_sizes/font_size = 30
+text = "Silenciar"
+
 [connection signal="pressed" from="Options/Comenzar" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="Options/Reglas" to="." method="_on_reglas_pressed"]
 [connection signal="pressed" from="Options/Exit" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="Options/MuteButton" to="." method="_on_mute_button_pressed"]

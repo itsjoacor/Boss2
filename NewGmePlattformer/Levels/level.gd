@@ -49,6 +49,3 @@ func _pause_game():
 func _resume_game():
 	get_tree().paused = false
 	pause_menu.visible = false # Hide the pause menu
-
-func _process(delta):
-	print("Paused state: ", get_tree().paused)
