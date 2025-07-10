@@ -1,7 +1,7 @@
 extends Area2D
 
 func _ready():
-	# Double-check layers
+
 	collision_layer = 0
 	collision_mask = 4
 	print("DeathZone ready - Mask:", collision_mask)

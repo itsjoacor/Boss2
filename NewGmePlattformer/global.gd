@@ -8,6 +8,10 @@ var is_muted := false
 var elapsed_time := 0.0
 var timer_running := false
 
+
+var best_time := 9999999.0  
+var best_gems := 0 
+
 func _process(delta):
 	if timer_running:
 		elapsed_time += delta
@@ -19,13 +23,16 @@ func start_timer():
 func stop_timer():
 	timer_running = false
 
-func get_formatted_time() -> String:
-	var minutes = int(elapsed_time) / 60
-	var seconds = int(elapsed_time) % 60
-	return "%02d:%02d" % [minutes, seconds]
+func get_formatted_time(time: float = -1.0) -> String:
+	if time < 0:
+		time = elapsed_time
+	var minutes := int(time / 60)
+	var seconds := int(time) % 60
+	var milliseconds := int((time - int(time)) * 100)
+	return "%02d:%02d:%02d" % [minutes, seconds, milliseconds]
 
 
-# Call this when starting a NEW GAME (not when changing levels)
+
 func reset_gems():
 	gems_collected = 0
 	

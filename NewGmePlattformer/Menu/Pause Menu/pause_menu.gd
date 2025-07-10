@@ -2,13 +2,13 @@ extends CanvasLayer
 
 signal resume_requested
 
-# Variables de navegación
+
 var current_selection := 0
 var menu_items := []
 var navigation_enabled := true
 
 func _ready():
-	# Inicializar los botones en orden
+
 	menu_items = [
 		$CenterContainer/Resume,
 		$CenterContainer/Restart,
@@ -16,19 +16,19 @@ func _ready():
 		$CenterContainer/MuteButton
 	]
 
-	# Configurar vecinos para navegación circular
+
 	_setup_navigation()
 
-	# Esperar un frame para que todo esté cargado antes de dar foco
+
 	await get_tree().process_frame
 	_update_selection()
 	_update_mute_button()
 
-	# Conectar para mantener actualizado el índice al moverse con mouse o teclado
+
 	get_viewport().gui_focus_changed.connect(_on_focus_changed)
 
 func _setup_navigation():
-	# Conexiones manuales de navegación entre botones
+
 	$CenterContainer/Resume.focus_neighbor_bottom = $CenterContainer/Restart.get_path()
 	$CenterContainer/Resume.focus_neighbor_top = $CenterContainer/MuteButton.get_path()
 
@@ -65,7 +65,7 @@ func _input(event):
 
 	elif event.is_action_pressed("ui_accept"):
 		get_viewport().set_input_as_handled()
-		await get_tree().create_timer(0.01).timeout  # Evita conflictos con escena reiniciada
+		await get_tree().create_timer(0.01).timeout  
 		if current_selection >= 0 and current_selection < menu_items.size():
 			menu_items[current_selection].emit_signal("pressed")
 

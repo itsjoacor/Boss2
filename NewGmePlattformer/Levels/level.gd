@@ -4,7 +4,7 @@ extends Node2D
 @onready var pause_menu = preload("res://Menu/Pause Menu/pause_menu.tscn").instantiate()
 var is_paused := false
 
-func _ready(): # <-- este nodo escucha tecla aunque el juego esté en pausa
+func _ready(): 
 
 	$HUD.level(level_num)
 	set_gems_label()
@@ -44,8 +44,8 @@ func _input(event):
 
 func _pause_game():
 	get_tree().paused = true
-	pause_menu.visible = true  # Show the pause menu
+	pause_menu.visible = true 
 
 func _resume_game():
 	get_tree().paused = false
-	pause_menu.visible = false # Hide the pause menu
+	pause_menu.visible = false

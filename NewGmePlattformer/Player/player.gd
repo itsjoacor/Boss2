@@ -10,8 +10,8 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 func _ready():
 	set_process_mode(Node.PROCESS_MODE_PAUSABLE)
 
-	collision_layer = 4 # Player now exists on layer 4
-	collision_mask = 1 | 2         # Keep original mask for TileMap
+	collision_layer = 4 
+	collision_mask = 1 | 2  
 	
 func _physics_process(delta):
 	if not is_on_floor():

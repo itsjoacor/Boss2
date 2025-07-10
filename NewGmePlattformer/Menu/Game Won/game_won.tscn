@@ -20,55 +20,76 @@ offset_bottom = 166.0
 theme_type_variation = &"HeaderLarge"
 theme_override_colors/font_color = Color(0.392157, 0.847059, 0.54902, 1)
 theme_override_fonts/font = ExtResource("3_uvcp7")
-theme_override_font_sizes/font_size = 45
+theme_override_font_sizes/font_size = 50
 text = "Ganaste!"
 horizontal_alignment = 1
 
 [node name="Options" type="VBoxContainer" parent="."]
-offset_left = 410.0
-offset_top = 267.0
-offset_right = 754.0
-offset_bottom = 506.0
+offset_left = 417.0
+offset_top = 422.0
+offset_right = 761.0
+offset_bottom = 661.0
 
 [node name="Restart" type="Button" parent="Options"]
 layout_mode = 2
+theme_override_colors/font_color = Color(0.392157, 0.847059, 0.54902, 1)
 theme_override_fonts/font = ExtResource("3_uvcp7")
 theme_override_font_sizes/font_size = 30
 text = "Reiniciar"
 
 [node name="Menu principal" type="Button" parent="Options"]
 layout_mode = 2
+theme_override_colors/font_color = Color(0.392157, 0.847059, 0.54902, 1)
 theme_override_fonts/font = ExtResource("3_uvcp7")
 theme_override_font_sizes/font_size = 30
 text = "Menu principal"
 
 [node name="Quit" type="Button" parent="Options"]
 layout_mode = 2
+theme_override_colors/font_color = Color(0.392157, 0.847059, 0.54902, 1)
 theme_override_fonts/font = ExtResource("3_uvcp7")
 theme_override_font_sizes/font_size = 30
 text = "Salir"
 
 [node name="Tiempo" type="Label" parent="."]
-offset_left = 942.0
-offset_top = 564.0
-offset_right = 1030.0
-offset_bottom = 589.0
+offset_left = 478.0
+offset_top = 211.0
+offset_right = 566.0
+offset_bottom = 236.0
 theme_override_colors/font_color = Color(0.392157, 0.847059, 0.54902, 1)
 theme_override_fonts/font = ExtResource("3_uvcp7")
 theme_override_font_sizes/font_size = 20
 
 [node name="Gemas" type="Label" parent="."]
-offset_left = 942.0
-offset_top = 590.0
-offset_right = 1025.0
-offset_bottom = 615.0
+offset_left = 478.0
+offset_top = 237.0
+offset_right = 561.0
+offset_bottom = 262.0
 theme_override_colors/font_color = Color(0.392157, 0.847059, 0.54902, 1)
 theme_override_fonts/font = ExtResource("3_uvcp7")
 theme_override_font_sizes/font_size = 20
 
-[connection signal="pressed" from="Options/Restart" to="." method="_on_restart_pressed"]
+[node name="Best Time" type="Label" parent="."]
+offset_left = 478.0
+offset_top = 278.0
+offset_right = 566.0
+offset_bottom = 303.0
+theme_override_colors/font_color = Color(1.05888e-06, 0.885687, 0.362887, 1)
+theme_override_fonts/font = ExtResource("3_uvcp7")
+theme_override_font_sizes/font_size = 20
+
+[node name="Best Gems" type="Label" parent="."]
+offset_left = 478.0
+offset_top = 304.0
+offset_right = 561.0
+offset_bottom = 329.0
+theme_override_colors/font_color = Color(1.05888e-06, 0.885687, 0.362887, 1)
+theme_override_fonts/font = ExtResource("3_uvcp7")
+theme_override_font_sizes/font_size = 20
+
 [connection signal="pressed" from="Options/Restart" to="." method="_on_start_button_pressed"]
-[connection signal="pressed" from="Options/Menu principal" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="Options/Restart" to="." method="_on_restart_pressed"]
 [connection signal="pressed" from="Options/Menu principal" to="." method="_on_start_button_pressed"]
-[connection signal="pressed" from="Options/Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="Options/Menu principal" to="." method="_on_restart_pressed"]
 [connection signal="pressed" from="Options/Quit" to="." method="_on_fullscreen_button_pressed"]
+[connection signal="pressed" from="Options/Quit" to="." method="_on_quit_pressed"]

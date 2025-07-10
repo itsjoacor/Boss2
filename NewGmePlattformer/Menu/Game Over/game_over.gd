@@ -10,7 +10,7 @@ func _ready():
 	Global.stop_timer()
 
 	
-	# Safely get the button
+
 	var retry_button = $VBoxContainer/RetryButton
 	
 	if retry_button:
@@ -19,7 +19,7 @@ func _ready():
 		push_error("RetryButton not found! Check node path.")
 
 func _on_retry_button_pressed():
-	Global.gems_collected = 0  # Reset gems
+	Global.gems_collected = 0
 	Global.elapsed_time = 0.0
 	Global.start_timer()
 
@@ -28,10 +28,10 @@ func _on_retry_button_pressed():
 
 
 func _on_quit_pressed() -> void:
-	Global.gems_collected = 0  # Reset gems
+	Global.gems_collected = 0 
 	get_tree().quit()
 
 
 func _on_menu_principal_pressed() -> void:
-	Global.gems_collected = 0  # Reset gems
+	Global.gems_collected = 0 
 	get_tree().change_scene_to_file("res://Menu/Main Menu/main_menu.tscn")
