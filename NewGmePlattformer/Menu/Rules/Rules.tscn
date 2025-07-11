@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://df88088ffsrkl"]
+[gd_scene load_steps=5 format=3 uid="uid://df88088ffsrkl"]
 
 [ext_resource type="Script" uid="uid://5saj5wqj5gmf" path="res://Menu/Rules/rules.gd" id="1_ui552"]
+[ext_resource type="Texture2D" uid="uid://t05ka2yniq7u" path="res://assets/Fonts/Reglas.png" id="2_d18e4"]
 [ext_resource type="FontFile" uid="uid://c50a1jx4w8g1" path="res://assets/Fonts/Xolonium-Regular.ttf" id="2_gbofm"]
 [ext_resource type="Texture2D" uid="uid://c2iinvpqxk5so" path="res://assets/player.png" id="2_wd6ui"]
 
@@ -12,11 +13,18 @@ position = Vector2(578.5, 328.5)
 scale = Vector2(18.1094, 10.1719)
 texture = ExtResource("2_wd6ui")
 
-[node name="TitleLabel" type="Label" parent="."]
-offset_left = 7.0
-offset_top = 30.0
-offset_right = 1155.0
-offset_bottom = 85.0
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(586, 300)
+scale = Vector2(0.930881, 0.853588)
+texture = ExtResource("2_d18e4")
+
+[node name="TitleLabel" type="Label" parent="CanvasLayer"]
+offset_left = 483.0
+offset_top = 18.0
+offset_right = 661.0
+offset_bottom = 79.0
 theme_type_variation = &"HeaderLarge"
 theme_override_colors/font_color = Color(0.392157, 0.847059, 0.54902, 1)
 theme_override_fonts/font = ExtResource("2_gbofm")
@@ -24,33 +32,13 @@ theme_override_font_sizes/font_size = 50
 text = "Reglas"
 horizontal_alignment = 1
 
-[node name="Rules" type="Label" parent="."]
-offset_left = 210.0
-offset_top = 93.0
-offset_right = 947.0
-offset_bottom = 541.0
-theme_type_variation = &"HeaderLarge"
-theme_override_fonts/font = ExtResource("2_gbofm")
-text = "
-🧍‍♂️ Movimiento
-Moverse a la izquierda con ⬅️ ó (A)
-Moverse a la derecha con ➡️ó (D)
+[node name="Options" type="VBoxContainer" parent="CanvasLayer"]
+offset_left = 489.0
+offset_top = 542.0
+offset_right = 667.0
+offset_bottom = 701.0
 
-🕴️ Saltar
-Saltar con ⬆️ (W), ó usando la barra espaciadora.
-
-💎 Objetivo
-Recolectá la mayor cantidad de gemas posibles.
-Llegá al final del nivel sin caerte al vacío 🚫🕳️"
-horizontal_alignment = 1
-
-[node name="Options" type="VBoxContainer" parent="."]
-offset_left = 499.0
-offset_top = 535.0
-offset_right = 665.0
-offset_bottom = 639.0
-
-[node name="Comenzar" type="Button" parent="Options"]
+[node name="Comenzar" type="Button" parent="CanvasLayer/Options"]
 layout_mode = 2
 theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
 theme_override_colors/font_color = Color(0.392157, 0.847059, 0.54902, 1)
@@ -58,12 +46,12 @@ theme_override_fonts/font = ExtResource("2_gbofm")
 theme_override_font_sizes/font_size = 30
 text = "Comenzar"
 
-[node name="Atras" type="Button" parent="Options"]
+[node name="Atras" type="Button" parent="CanvasLayer/Options"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.392157, 0.847059, 0.54902, 1)
 theme_override_fonts/font = ExtResource("2_gbofm")
 theme_override_font_sizes/font_size = 30
 text = "Atras"
 
-[connection signal="pressed" from="Options/Comenzar" to="." method="_on_comenzar_pressed"]
-[connection signal="pressed" from="Options/Atras" to="." method="_on_atras_pressed"]
+[connection signal="pressed" from="CanvasLayer/Options/Comenzar" to="." method="_on_comenzar_pressed"]
+[connection signal="pressed" from="CanvasLayer/Options/Atras" to="." method="_on_atras_pressed"]

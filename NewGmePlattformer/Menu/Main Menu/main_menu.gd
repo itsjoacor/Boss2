@@ -19,13 +19,13 @@ func _on_mute_button_pressed():
 	Global.is_muted = !Global.is_muted
 	if Global.is_muted:
 		AudioServer.set_bus_mute(AudioServer.get_bus_index("Master"), true)
-		$Options/MuteButton.text = "🔊"
+		$Options/MuteButton.text = "Sonido: ON"
 	else:
 		AudioServer.set_bus_mute(AudioServer.get_bus_index("Master"), false)
-		$Options/MuteButton.text = "🔇"
+		$Options/MuteButton.text = "Sonido: OFF"
 		
 func _update_mute_button():
 	if Global.is_muted:
-		$Options/MuteButton.text = "🔊"
+		$Options/MuteButton.text = "Sonido: ON"
 	else:
-		$Options/MuteButton.text = "🔇"
+		$Options/MuteButton.text = "Sonido: OFF"

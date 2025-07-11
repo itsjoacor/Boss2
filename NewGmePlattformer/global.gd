@@ -38,4 +38,3 @@ func reset_gems():
 	
 func _ready():
 	print("Global initialized - Level: ", current_level, " Gems: ", gems_collected)
-	 

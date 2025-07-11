@@ -78,9 +78,9 @@ func _on_visibility_changed():
 
 func _update_mute_button():
 	if Global.is_muted:
-		$CenterContainer/MuteButton.text = "🔊"
+		$CenterContainer/MuteButton.text = "Sonido: ON"
 	else:
-		$CenterContainer/MuteButton.text = "🔇"
+		$CenterContainer/MuteButton.text = "Sonido: OFF"
 
 func _on_mute_button_pressed():
 	Global.is_muted = !Global.is_muted

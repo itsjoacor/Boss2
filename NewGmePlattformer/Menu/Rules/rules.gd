@@ -2,9 +2,9 @@ extends CanvasLayer
 
 
 func _ready():
-	$Options/Atras.grab_focus()
-
-
+	$CanvasLayer/Options/Comenzar.grab_focus()
+	$CanvasLayer/Options/Atras.grab_focus()
+	
 func _on_fullscreen_button_pressed():
 	if DisplayServer.window_get_mode() == DisplayServer.WINDOW_MODE_FULLSCREEN:
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
