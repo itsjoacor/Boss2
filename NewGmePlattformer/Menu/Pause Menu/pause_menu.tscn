@@ -8,7 +8,7 @@
 script = ExtResource("1_1nr6k")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(583.5, 329)
+position = Vector2(577, 322)
 scale = Vector2(18.0469, 10.3438)
 texture = ExtResource("2_pc84b")
 
@@ -21,15 +21,15 @@ theme_type_variation = &"HeaderLarge"
 theme_override_colors/font_color = Color(0.392157, 0.847059, 0.54902, 1)
 theme_override_fonts/font = ExtResource("3_hf0nn")
 theme_override_font_sizes/font_size = 50
-text = "Pause menu"
+text = "Menu Pausa"
 horizontal_alignment = 1
 
 [node name="Label" type="Label" parent="."]
-offset_left = 459.0
-offset_top = 512.0
-offset_right = 706.0
-offset_bottom = 535.0
-text = "Presionar P o Esc para reanudar"
+offset_left = 436.0
+offset_top = 507.0
+offset_right = 729.0
+offset_bottom = 530.0
+text = "Presionar P, Esc o Start para reanudar"
 
 [node name="CenterContainer" type="VBoxContainer" parent="."]
 offset_left = 444.0

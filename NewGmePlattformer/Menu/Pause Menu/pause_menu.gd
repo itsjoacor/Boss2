@@ -97,7 +97,7 @@ func _on_restart_pressed():
 	Global.start_timer()
 	Global.gems_collected = 0
 	get_tree().paused = false
-	get_tree().reload_current_scene()
+	get_tree().change_scene_to_file("res://Levels/level_1.tscn")
 
 func _on_quit_pressed():
 	navigation_enabled = false

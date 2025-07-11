@@ -32,6 +32,7 @@ func update_records():
 
 	if Global.gems_collected > Global.best_gems:
 		Global.best_gems = Global.gems_collected
+
 		
 func _on_quit_pressed() -> void:
 		get_tree().quit()
@@ -42,3 +43,8 @@ func _on_restart_pressed() -> void:
 	Global.start_timer()
 	Global.gems_collected = 0
 	get_tree().change_scene_to_file("res://Levels/level_1.tscn")
+
+
+func _on_menu_principal_pressed() -> void:
+	Global.gems_collected = 0 
+	get_tree().change_scene_to_file("res://Menu/Main Menu/main_menu.tscn")
