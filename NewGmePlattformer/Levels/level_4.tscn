@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://cbmb5cipyhb2u" path="res://assets/Terrain (16x16).png" id="3_m0m22"]
 [ext_resource type="PackedScene" uid="uid://d8wkk8dncdhg" path="res://DeathZone/DeathZone.tscn" id="4_utic7"]
 [ext_resource type="PackedScene" uid="uid://bdyp538fqygcq" path="res://HUD/hud.tscn" id="5_x4mg1"]
-[ext_resource type="PackedScene" uid="uid://cboi8hec4yf0c" path="res://Player/player.tscn" id="6_6iucq"]
+[ext_resource type="PackedScene" uid="uid://cboi8hec4yf0c" path="res://Menu/Player/player.tscn" id="6_6iucq"]
 [ext_resource type="PackedScene" uid="uid://clikcsot5ncta" path="res://Door/door.tscn" id="7_fcg6d"]
 [ext_resource type="PackedScene" uid="uid://dypev0qrj3e6s" path="res://Gem/gem.tscn" id="8_3227t"]
 [ext_resource type="AudioStream" uid="uid://1vgh2yhyxy3a" path="res://assets/actiontheme-v3.ogg" id="9_lk1ng"]

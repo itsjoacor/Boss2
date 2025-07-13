@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=3 uid="uid://cboi8hec4yf0c"]
 
-[ext_resource type="Script" uid="uid://cdvt1anbaaxr5" path="res://Player/player.gd" id="1_7msvu"]
+[ext_resource type="Script" uid="uid://cdvt1anbaaxr5" path="res://Menu/Player/player.gd" id="1_7msvu"]
 [ext_resource type="Texture2D" uid="uid://cmyw7fmkbaox3" path="res://monochrome_tilemap_transparent.png" id="2_erru1"]
 [ext_resource type="AudioStream" uid="uid://bwkldmy87gn66" path="res://assets/jump.wav" id="3_brij0"]
 
@@ -54,7 +54,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"run",
-"speed": 6.0
+"speed": 20.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_eynex"]
@@ -74,6 +74,7 @@ drag_vertical_enabled = true
 position = Vector2(0, -4)
 sprite_frames = SubResource("SpriteFrames_yexds")
 animation = &"run"
+frame_progress = 0.53538
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_eynex")

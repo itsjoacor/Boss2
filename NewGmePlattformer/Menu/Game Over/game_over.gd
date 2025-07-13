@@ -4,7 +4,7 @@ func _ready():
 	$Options/RetryButton.grab_focus()
 
 	await get_tree().process_frame
-	$Tiempo.text = "Tiempo: " + Global.get_formatted_time()
+	$Tiempo.text = "Tiempo Restante: " + Global.get_formatted_time(Global.time_remaining)
 	$Gemas.text = "Gemas: " + str(Global.gems_collected)
 
 	Global.stop_timer()
@@ -20,7 +20,7 @@ func _ready():
 
 func _on_retry_button_pressed():
 	Global.gems_collected = 0
-	Global.elapsed_time = 0.0
+	Global.time_remaining = 120.0
 	Global.start_timer()
 
 	get_tree().change_scene_to_file("res://Levels/level_1.tscn")

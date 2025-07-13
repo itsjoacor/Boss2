@@ -89,11 +89,11 @@ func _on_mute_button_pressed():
 	_update_mute_button()
 
 func _on_resume_pressed():
+	Global.timer_running = true
 	resume_requested.emit()
-
+	
 func _on_restart_pressed():
 	navigation_enabled = false
-	Global.elapsed_time = 0.0
 	Global.start_timer()
 	Global.gems_collected = 0
 	get_tree().paused = false

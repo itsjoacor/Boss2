@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://dypev0qrj3e6s"]
+[gd_scene load_steps=9 format=3 uid="uid://dypev0qrj3e6s"]
 
 [ext_resource type="Texture2D" uid="uid://cmyw7fmkbaox3" path="res://monochrome_tilemap_transparent.png" id="1_5m8k5"]
 [ext_resource type="Script" uid="uid://x7om85xe1aby" path="res://Gem/gem.gd" id="1_606fa"]
+[ext_resource type="Texture2D" uid="uid://dpf38tqjkisrb" path="res://assets/gem_3.png" id="3_cu34n"]
 [ext_resource type="AudioStream" uid="uid://dxjgadwscnl7q" path="res://assets/gem.wav" id="3_hfxuq"]
 [ext_resource type="Texture2D" uid="uid://cq6meuyaodnsx" path="res://assets/Gem2.png" id="4_cu34n"]
 
@@ -25,6 +26,7 @@ animations = [{
 
 [node name="Gem" type="Area2D"]
 script = ExtResource("1_606fa")
+collected_texture = ExtResource("3_cu34n")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0.5, 0)
@@ -35,8 +37,8 @@ visible = false
 sprite_frames = SubResource("SpriteFrames_bhs42")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(0.375, -0.250001)
-scale = Vector2(0.0880952, 0.0905797)
+position = Vector2(-4.76837e-07, -4.76837e-07)
+scale = Vector2(0.0952381, 0.0869565)
 texture = ExtResource("4_cu34n")
 
 [node name="CollectedSfx" type="AudioStreamPlayer" parent="."]

@@ -6,7 +6,7 @@ func _ready():
 
 func _on_start_button_pressed():
 	Global.start_timer()
-	get_tree().change_scene_to_file("res://Levels/level_1.tscn")
+	get_tree().change_scene_to_file("res://Menu/Lore/Lore.tscn")
 
 func _on_quit_button_pressed():
 	Global.gems_collected = 0

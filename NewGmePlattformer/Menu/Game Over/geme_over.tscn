@@ -13,10 +13,10 @@ scale = Vector2(18.0781, 10.1406)
 texture = ExtResource("2_itgon")
 
 [node name="TitleLabel" type="Label" parent="."]
-offset_left = 3.0
+offset_left = 10.0
 offset_top = 119.0
-offset_right = 1151.0
-offset_bottom = 174.0
+offset_right = 1158.0
+offset_bottom = 180.0
 theme_type_variation = &"HeaderLarge"
 theme_override_colors/font_color = Color(0.392157, 0.847059, 0.54902, 1)
 theme_override_fonts/font = ExtResource("3_itgon")
@@ -52,20 +52,20 @@ theme_override_font_sizes/font_size = 30
 text = "Salir"
 
 [node name="Tiempo" type="Label" parent="."]
-offset_left = 944.0
+offset_left = 849.0
 offset_top = 567.0
-offset_right = 1032.0
+offset_right = 937.0
 offset_bottom = 592.0
-theme_override_colors/font_color = Color(0.392157, 0.847059, 0.54902, 1)
+theme_override_colors/font_color = Color(0.392157, 0.847059, 0.533333, 1)
 theme_override_fonts/font = ExtResource("3_itgon")
 theme_override_font_sizes/font_size = 20
 
 [node name="Gemas" type="Label" parent="."]
-offset_left = 944.0
+offset_left = 849.0
 offset_top = 593.0
-offset_right = 1027.0
+offset_right = 932.0
 offset_bottom = 618.0
-theme_override_colors/font_color = Color(0.392157, 0.847059, 0.54902, 1)
+theme_override_colors/font_color = Color(0.392157, 0.847059, 0.533333, 1)
 theme_override_fonts/font = ExtResource("3_itgon")
 theme_override_font_sizes/font_size = 20
 
