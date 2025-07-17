@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://df88088ffsrkl"]
 
 [ext_resource type="Script" uid="uid://5saj5wqj5gmf" path="res://Menu/Rules/rules.gd" id="1_ui552"]
-[ext_resource type="Texture2D" uid="uid://t05ka2yniq7u" path="res://assets/Fonts/Reglas.png" id="2_d18e4"]
 [ext_resource type="FontFile" uid="uid://c50a1jx4w8g1" path="res://assets/Fonts/Xolonium-Regular.ttf" id="2_gbofm"]
 [ext_resource type="Texture2D" uid="uid://c2iinvpqxk5so" path="res://assets/player.png" id="2_wd6ui"]
+[ext_resource type="Texture2D" uid="uid://yqc5gmat26yd" path="res://assets/REGLAS - VIDEOJUEGOS.png" id="3_d18e4"]
 
 [node name="Rules" type="CanvasLayer"]
 script = ExtResource("1_ui552")
@@ -16,9 +16,9 @@ texture = ExtResource("2_wd6ui")
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="CanvasLayer"]
-position = Vector2(586, 300)
-scale = Vector2(0.930881, 0.853588)
-texture = ExtResource("2_d18e4")
+position = Vector2(569, 341)
+scale = Vector2(0.873318, 1.00318)
+texture = ExtResource("3_d18e4")
 
 [node name="TitleLabel" type="Label" parent="CanvasLayer"]
 offset_left = 483.0
@@ -33,10 +33,10 @@ text = "Reglas"
 horizontal_alignment = 1
 
 [node name="Options" type="VBoxContainer" parent="CanvasLayer"]
-offset_left = 489.0
-offset_top = 542.0
-offset_right = 667.0
-offset_bottom = 701.0
+offset_left = 846.0
+offset_top = 527.0
+offset_right = 1024.0
+offset_bottom = 686.0
 
 [node name="Comenzar" type="Button" parent="CanvasLayer/Options"]
 layout_mode = 2

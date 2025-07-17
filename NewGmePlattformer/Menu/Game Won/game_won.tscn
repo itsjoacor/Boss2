@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://mk4oxdd7r3wk"]
+[gd_scene load_steps=5 format=3 uid="uid://mk4oxdd7r3wk"]
 
 [ext_resource type="Script" uid="uid://ctt1f4pr6mnxu" path="res://Menu/Game Won/game_won.gd" id="1_phsy6"]
 [ext_resource type="Texture2D" uid="uid://c2iinvpqxk5so" path="res://assets/player.png" id="2_uvcp7"]
 [ext_resource type="FontFile" uid="uid://c50a1jx4w8g1" path="res://assets/Fonts/Xolonium-Regular.ttf" id="3_uvcp7"]
+[ext_resource type="AudioStream" uid="uid://bfc0obayqvl1r" path="res://assets/vitory_sound.mp3" id="4_dhky3"]
 
 [node name="GameWon" type="CanvasLayer"]
 script = ExtResource("1_phsy6")
@@ -87,8 +88,11 @@ theme_override_colors/font_color = Color(5.77569e-07, 0.980221, 0.404882, 1)
 theme_override_fonts/font = ExtResource("3_uvcp7")
 theme_override_font_sizes/font_size = 20
 
-[connection signal="pressed" from="Options/Restart" to="." method="_on_start_button_pressed"]
+[node name="VictorySoundPlayer" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_dhky3")
+
 [connection signal="pressed" from="Options/Restart" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="Options/Restart" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="Options/Menu principal" to="." method="_on_menu_principal_pressed"]
 [connection signal="pressed" from="Options/Quit" to="." method="_on_quit_pressed"]
 [connection signal="pressed" from="Options/Quit" to="." method="_on_fullscreen_button_pressed"]

@@ -42,9 +42,9 @@ func _on_menu_principal_pressed() -> void:
 
 
 func play_death_sound():
-	# Access the node directly when needed
+
 	var sound_player = $DeathSoundPlayer
 	if lose_sound:
 		sound_player.stream = lose_sound
 	sound_player.play()
-	return sound_player  # Return the player so we can await it
+	return sound_player 

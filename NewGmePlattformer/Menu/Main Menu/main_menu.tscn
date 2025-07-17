@@ -13,15 +13,15 @@ scale = Vector2(18.0156, 10.1406)
 texture = ExtResource("2_vf21d")
 
 [node name="TitleLabel" type="Label" parent="."]
-offset_left = 4.0
+offset_left = 5.0
 offset_top = 149.0
-offset_right = 1152.0
-offset_bottom = 204.0
+offset_right = 1153.0
+offset_bottom = 210.0
 theme_type_variation = &"HeaderLarge"
 theme_override_colors/font_color = Color(0.392157, 0.847059, 0.54902, 1)
 theme_override_fonts/font = ExtResource("2_tvur4")
-theme_override_font_sizes/font_size = 50
-text = "Bienvenidos!"
+theme_override_font_sizes/font_size = 60
+text = "RATA ESPACIAL"
 horizontal_alignment = 1
 
 [node name="Options" type="VBoxContainer" parent="."]

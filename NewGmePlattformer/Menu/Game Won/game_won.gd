@@ -1,6 +1,9 @@
 extends CanvasLayer
 
+@export var victory_sound: AudioStream = preload("res://assets/vitory_sound.mp3")
+
 func _ready():
+	play_victory_sound()
 	$Options/Restart.grab_focus() 
 	
 	await get_tree().process_frame
@@ -35,3 +38,13 @@ func _on_restart_pressed() -> void:
 func _on_menu_principal_pressed() -> void:
 	Global.gems_collected = 0 
 	get_tree().change_scene_to_file("res://Menu/Main Menu/main_menu.tscn")
+	
+	
+	
+func play_victory_sound():
+
+	var sound_player = $VictorySoundPlayer
+	if victory_sound:
+		sound_player.stream = victory_sound
+	sound_player.play()
+	return sound_player

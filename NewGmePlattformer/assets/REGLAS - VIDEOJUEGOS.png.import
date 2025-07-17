@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://3jgciuw88578"
-path="res://.godot/imported/gamebackground.jpg-ae9f5eb6965e28e6e7579d9314821ead.ctex"
+uid="uid://yqc5gmat26yd"
+path="res://.godot/imported/REGLAS - VIDEOJUEGOS.png-4979d185068bd10cde72bfbfe9c642b4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/gamebackground.jpg"
-dest_files=["res://.godot/imported/gamebackground.jpg-ae9f5eb6965e28e6e7579d9314821ead.ctex"]
+source_file="res://assets/REGLAS - VIDEOJUEGOS.png"
+dest_files=["res://.godot/imported/REGLAS - VIDEOJUEGOS.png-4979d185068bd10cde72bfbfe9c642b4.ctex"]
 
 [params]
 
